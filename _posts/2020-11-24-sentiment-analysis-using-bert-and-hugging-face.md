@@ -4,10 +4,14 @@ title:  "Sentiment Analysis using BERT and hugging face"
 tags: [ Tips, Natural Language Processing  ]
 featured_image_thumbnail: assets/images/Bert_sentiment/BS_f0_thumbnail.jpg
 featured_image: assets/images/Bert_sentiment/BS_f0.jpg
+featured: true
+hidden: true
 ---
 
 
 This article talks about how can we use pretrained language model BERT to do transfer learning on most famous task in NLP - Sentiment Analysis 
+
+<!--more-->
 
 Transfer learning is very popular in deep learning but mostly confined to computer vision. Transfer learning in NLP is not very popular until recently(thanks to pretrained
 language models). But this usage went up so fast starting 2018 after paper on BERT was released. BERT stands for Bidirectional Encoder Representations from Transformers. We can think of this as a language models which looks at both left and right context when prediciting current word. This is what they called masked language modelling(MLM). Additionally BERT also use 'next sentence prediction' task in addition to MLM during pretraining. We can use this pretrained BERT model for transfer learning on downstream tasks like our Sentiment Analysis.
