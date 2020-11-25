@@ -4,8 +4,6 @@ title:  "Sentiment Analysis using BERT and hugging face"
 tags: [ Tips, Natural Language Processing  ]
 featured_image_thumbnail: assets/images/Bert_sentiment/BS_f0_thumbnail.jpg
 featured_image: assets/images/Bert_sentiment/BS_f0.jpg
-featured: true
-hidden: true
 ---
 
 
