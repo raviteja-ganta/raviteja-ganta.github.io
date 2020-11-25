@@ -2,8 +2,8 @@
 layout: post
 title:  "Distilling the Knowledge in a Neural Network"
 tags: [ Tips, Computer Vision, Natural Language Processing, Neural Networks  ]
-featured_image_thumbnail: assets/images/Neural_style_transfer/NS_fig1_thumbnail.png
-featured_image: assets/images/Neural_style_transfer/NS_fig1.png
+featured_image_thumbnail: assets/images/Distill_knowledge/B4_thumbnail.jpg
+featured_image: assets/images/Distill_knowledge/B4.jpg
 ---
 
 How can we compress and transfer knowledge from bigger model or ensemble of models(which were trained on very large datasets to extract structure from data) to a single small
