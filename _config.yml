@@ -1,13 +1,13 @@
 # Site setings
 name: 'Ravi.ai'
-description: 'Horace is a simple Jekyll theme for writers and bloggers. Explore it yourself.'
+description: 'This is the place where I write articles in area of deep learning.'
 meta_description: 'Jekyll template, minimal style, perfect for bloggers.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: 
-production_url: https://horace.netlify.com/
-disqus: 'justgoodthemes'
-mailchimp_url: '//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117'
+production_url: 
+disqus: 
+mailchimp_url:
 cover_image: bc_1.jpg
 # Add your GA Tracking Id
 ga_analytics: 
@@ -16,7 +16,7 @@ ga_analytics:
 # Author
 author:
   name: 'Raviteja Ganta'
-  image: 'authorimage.jpg'
+  image: 'Profile_pic1.jpg'
   greetings: 'Hi there!'
   description: "My name is Raviteja Ganta. I'm a data scientist."
   bio: 'Raviteja is a data scientist. He loves building Machine learning and deep learning solutions. Aspring deep learning researcher.'
@@ -27,16 +27,16 @@ email: ravitejareddy.ganta@gmail.com
 #thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
 
 # Social links
-twitter: 'username'
-facebook: 'username'
-github: 'username'
-codepen: 'username'
-dribbble: 'username'
-medium: '@username'
-instagram: 'username'
-pinterest: 'username'
-linkedin: 'username'
-producthunt: '@username'
+# twitter: 'username'
+# facebook: 'username'
+github: 'raviteja-ganta'
+# codepen: 'username'
+# dribbble: 'username'
+# medium: '@username'
+# instagram: 'username'
+# pinterest: 'username'
+# linkedin: 'username'
+# producthunt: '@username'
 
 # Navigation
 navigation:
