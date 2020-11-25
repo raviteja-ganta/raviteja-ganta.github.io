@@ -16,7 +16,7 @@ ga_analytics:
 # Author
 author:
   name: 'Raviteja Ganta'
-  image: 'assets/images/authorimage.jpg'
+  image: 'authorimage.jpg'
   greetings: 'Hi there!'
   description: "My name is Raviteja Ganta. I'm a data scientist."
   bio: 'Raviteja is a data scientist. He loves building Machine learning and deep learning solutions. Aspring deep learning researcher.'
