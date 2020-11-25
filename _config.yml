@@ -16,9 +16,9 @@ ga_analytics:
 # Author
 author:
   name: 'Raviteja Ganta'
-  image: 'assets/images/Profile_pic1.jpg'
+  image: 'https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Profile_pic1.jpg'
   greetings: 'Hi there!'
-  description: "My name is Raviteja Ganta. I'm a data scientist.
+  description: "My name is Raviteja Ganta. I'm a data scientist."
   bio: 'Raviteja is a data scientist. He loves building Machine learning and deep learning solutions. Aspring deep learning researcher.'
 
 # Contact form setings
