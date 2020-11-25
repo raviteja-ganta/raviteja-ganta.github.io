@@ -4,12 +4,9 @@ title: About
 featured_image: /assets/images/pages/about.jpg
 ---
 
-Daniel Bennett is a senior developer from Vilnius, Lithuania. After graduating from The College with a degree in **Computer Science**, he worked for three small web shops where he honed his development skills and love for JavaScript.
+A data enthusiast with good knowledge of Analytics tools and techniques who is passionate about using data to create realistic insights and identifying actionable business opportunities through extensive statistical analysis.
 
-His work has been recognized by Communication Arts, IBM, How, ID, IdN, AIGA, Effie, Archive, Graphis, AdFed and Rockport. **Net** magazine named him a person to watch in 2018.
+Love building Machine learning and Deep learning solutions. Aspiring deep learning researcher
 
->The world always seems brighter when you’ve just made something that wasn’t there before. <cite>Neil Gaiman</cite>
-
-As a hobby, Daniel authors the most influential JavaScript blog in Lithuania with over 100,000 page views a month. He lives in Vilnius with his beautiful wife, two boys and one girl.
 
 *Thank You for reading!*
