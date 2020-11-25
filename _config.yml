@@ -1,5 +1,5 @@
 # Site setings
-name: 'Horace'
+name: 'Ravi.ai'
 description: 'Horace is a simple Jekyll theme for writers and bloggers. Explore it yourself.'
 meta_description: 'Jekyll template, minimal style, perfect for bloggers.'
 logo: 'assets/images/logo.png'
@@ -15,16 +15,16 @@ ga_analytics:
 
 # Author
 author:
-  name: 'Daniel Bennett'
-  image: 'authorimage.jpg'
+  name: 'Raviteja Ganta'
+  image: 'assets/images/Profile_pic1.jpg'
   greetings: 'Hi there!'
-  description: "My name is Daniel Bennett. I'm a freelance front-end developer, author and speaker based in Austin, TX. It’s nice to meet you."
-  bio: 'Daniel is a designer, photographer, speaker, author of a couple of books about typography and the founder of photo magazine Curious.'
+  description: "My name is Raviteja Ganta. I'm a data scientist.
+  bio: 'Raviteja is a data scientist. He loves building Machine learning and deep learning solutions. Aspring deep learning researcher.'
 
 # Contact form setings
-email: youremail@email.com
-contact_page_description: "Horace theme comes with a contact form built-in. You can use this form with Formspree service and get up to 50 submissions for free. Also, you can easily switch to another service if you want."
-thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
+email: ravitejareddy.ganta@gmail.com
+#contact_page_description: "Horace theme comes with a contact form built-in. You can use this form with Formspree service and get up to 50 submissions for free. Also, you can easily switch to another service if you want."
+#thankyou_page_description: "Your message has been successfully sent. We will contact you very soon!"
 
 # Social links
 twitter: 'username'
