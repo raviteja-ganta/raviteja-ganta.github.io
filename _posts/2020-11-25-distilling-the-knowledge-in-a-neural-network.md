@@ -160,12 +160,33 @@ This shows that soft targets can transfer a great deal of knowledge to the small
 Its well known fact that transforming inputs by different transformations makes model generalize much better and in our case information about how to *generalize* is showing up in Dark knowledge and this is hiding in soft targets. None of this information is in True targets. So by using information from soft targets our small net is performing much better.
 
 
-All of above expreiment on MNIST is summarized below
+> Big net using soft targets learnt similarity metric that learnt 'what's like what' and with this knowledge transfer, we are telling the little net 'what's like what'
+
+
+All of above experiment on MNIST is summarized below
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Distill_knowledge/dk_10.gif" />
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Distill_knowledge/dk_10.png" />
 </p>
+
+
+#### Additional experiment on MNIST
+
+In addition authors also tried ommitting examples of digit 3 when training smaller model using distillation. So from perspective of small model, 3 is a mythical digit that it haas never seen. Since smaller model never seen 3 during training, we expect it to make lot of errors when encountering 3 in test set. Despite this, the distilled model only made 206 test errors of which 133 are on 1010 threes in test set. This clearly shows that generalization capabilities of large model were transferred to small model during distillation and this causes small model to correctly predict 3 in most cases
+
+
+So moral of story is..
+
+> Transforming input images greatly improves generalization. Transforming the targets has similarly large effect and if we can get soft targets from some where its much cheaper as we can get same peformance with smaller model
+
+
+
+References:
+
+1) Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.”
+2) Knowledge dsitillation by intellabs
+
 
 
 
