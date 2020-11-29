@@ -157,5 +157,15 @@ Authors now used both soft targets obtained from the big net and true tagets wit
 This shows that soft targets can transfer a great deal of knowledge to the small model, including the knowledge about how to generalize that is learned from translated training data. In other words, the benefit we got from transforming inputs transfers across to the little net even though we are not tranforming inputs for small net.
 
 
+Its well known fact that transforming inputs by different transformations makes model generalize much better and in our case information about how to *generalize* is showing up in Dark knowledge and this is hiding in soft targets. None of this information is in True targets. So by using information from soft targets our small net is performing much better.
+
+
+All of above expreiment on MNIST is summarized below
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Distill_knowledge/dk_10.gif" />
+</p>
+
 
 
