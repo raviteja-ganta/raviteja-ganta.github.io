@@ -178,14 +178,15 @@ In addition authors also tried ommitting examples of digit 3 when training small
 
 So moral of story is..
 
-> Transforming input images greatly improves generalization. Transforming the targets has similarly large effect and if we can get soft targets from some where its much cheaper as we can get same peformance with smaller model
+> Transforming input images greatly improves generalization. Transforming the targets also has similarly large effect and if we can get soft targets from some where its much cheaper as we can get same peformance with smaller model
 
 
 
 References:
 
 1) Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.”
-2) Knowledge dsitillation by intellabs
+
+2) Knowledge dsitillation by intellabs.
 
 
 
