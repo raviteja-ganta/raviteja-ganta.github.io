@@ -138,3 +138,24 @@ Authors also found that using small model to match true targets helps. This is i
 
 
 
+## Experiment on MNIST
+
+Authors used MNIST dataset to test this approach. They used two architectures for this which differs only in number of hidden units in middle layers. Authors used 2 hidden layer neural network in both cases
+
+1) **Smaller model** which can be viewed as 784 -> 800 -> 800 -> 10 (where 784 is unrolled dimensions of an image, 800 is number of hidden units with RELU activation and 10 is number of classes we are predicting). This model gave **146 test errors** with no regularization.
+
+2) **Bigger model** which can be viewed as 784 -> 1200 -> 1200 -> 10 (where 784 is unrolled dimensions of an image, 1200 is number of hidden units with RELU activation and 10 is number of classes we are predicting). This model is trained on MNIST using dropout, weight-constraints and jittering input images and this net acheived **67 test errors**.
+
+
+Can we transfer this improvement in bigger model to small model? 
+
+Authors now used both soft targets obtained from the big net and true tagets without dropout and no jittering of images i.e, smaller net was regularized solely by adding the additonal task of matching soft targets produced by large net at a temperature of 20 and the result is
+
+> **74 test erros** using 784 -> 800 -> 800 -> 10
+
+
+This shows that soft targets can transfer a great deal of knowledge to the small model, including the knowledge about how to generalize that is learned from translated training data. In other words, the benefit we got from transforming inputs transfers across to the little net even though we are not tranforming inputs for small net.
+
+
+
+
