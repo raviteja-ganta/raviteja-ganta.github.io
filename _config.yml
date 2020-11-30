@@ -42,7 +42,7 @@ github: 'raviteja-ganta'
 # Navigation
 navigation:
   - text: About
-    url: /about/
+    url: https://github.com/raviteja-ganta/raviteja-ganta.github.io/blob/main/about.md
 #   - text: Style Guide
 #     url: /style-guide/
   - text: Contact Me
