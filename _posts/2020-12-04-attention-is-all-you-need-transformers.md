@@ -26,7 +26,6 @@ In [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) paper, tran
 Transformer contains two main components.
 
 1) Encoder
-
 2) Decoder
 
 Input to Encoder would be English sentence and decoder outputs corresponding french sentence. Below is simple diagram showing how transformer is structured
@@ -42,5 +41,11 @@ Looking at above picture, one might say that this looks exactly like sequence to
 
 #### Encoder:
 
+Encoder block is a stack consisting of 6 identical layers. Each layer has 2 sublayers. First is a multi head self attention mechanism and second is a simple position wise fully connected feed forward network. Let discuss with a simple picture
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_5.png" />
+</p>
 
 
