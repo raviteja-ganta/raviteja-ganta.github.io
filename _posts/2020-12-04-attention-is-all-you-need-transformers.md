@@ -13,6 +13,13 @@ This page is in development. Please come back later.
 
 Historically RNN's like LSTM's and GRU's are widely used architectures for most of natural language understanding tasks like Machine traslation, language modelling. They performed decently well but one major drawback is RNN's process data sequentially. This inhibits parallelization, so more words we have in input sequence, more time it will take to process that sentence. In addition to sequential nature of RNN's, they suffer from vanishing gradient problems for long sequences. **Transformer** was introduced in paper [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) and it was shown that this new architecture is able to tackle the problems faced by RNN's
 
+I will try to explain each and every detail of Transformers in this blog post. Contents are as follows
+
+1) What is Transformer?
+2) Overview of Architecture
+3) Encoder
+  * 
+
 
 ### What is Transformer?
 
@@ -39,7 +46,7 @@ Input to Encoder would be English sentence and decoder outputs corresponding fre
 Looking at above picture, one might say that this looks exactly like sequence to sequence machine translation using RNN's where encoder takes input and decoder produces output. But all the magic happens inside big boxes above encoder/decoder where instead of sequential processing we have parallel processing and relies on 3 types of attention. So lets have a look at each component in detail.
 
 
-#### Encoder:
+### Encoder:
 
 Encoder block is a stack consisting of 6 identical layers. Each layer has 2 sublayers. First is a multi head self attention mechanism and second is a simple position wise fully connected feed forward network. Let discuss with a simple picture
 
@@ -60,7 +67,24 @@ Main property of transformer is that each word in input flows throgh its own pat
 </p>
 
 
-Lets understand the self-attention with an example
+Lets understand all the operations that happen in encoder with the help of 3 examples
+
+1) They go to gym everyday
+2) He is studying in third grade
+3) Red cat sitting on the table
+
+
+As with any NLP task, we first tokenize the sentence and convert in to numbers. After that we convert each number(corresponding to a word) in a sentence in to word embeddings. First will see how one sentence flows through encoder using vectors and slowly will transition in to using matrices for batch of sentences
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_7.png" />
+</p>
+
+
+Above I used embedding size of 4 for illustration. But in paper they used embedding size of 512. So input will be a list of vectors each of size 512. First input passes through Self Attention layer and then through Feed forward neural network layer
+
+
 
 
 
