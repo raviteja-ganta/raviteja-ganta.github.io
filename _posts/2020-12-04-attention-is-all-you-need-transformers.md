@@ -49,3 +49,19 @@ Encoder block is a stack consisting of 6 identical layers. Each layer has 2 subl
 </p>
 
 
+As seen above, encoder's input first flow through a self attention layer that helps the encoder look at other words in the input sentence as it encodes specific word. The outputs of self-attention layer are fed to feed-forward neural network. It is applied independently to each position.
+
+
+Main property of transformer is that each word in input flows throgh its own path in the enoder and in self attention these input words interact and have dependencies between them. Feed forward layer do not have these interactions and since each word flows in its own path, entire sequence can be executed in parallel as shown below.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_6.png" />
+</p>
+
+
+Lets understand the self-attention with an example
+
+
+
+
