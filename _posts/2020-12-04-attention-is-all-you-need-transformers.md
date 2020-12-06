@@ -129,7 +129,7 @@ For each word in input sentence, we want to get a score of all remaining words i
 
 
 
-**Self-Attention calculation:**
+#### Self-Attention calculation:
 
 Lets see now how can we calcualte similarity scores as in above fig.
 
@@ -146,6 +146,15 @@ Input representation(Fig.5) is multiplied by WQ matrix(linear layer) to get Q an
 </p>
 
 
+We are projecting these input vectors in to a space where dot product is a good proxy for similarity. Higher the dot product score, more similar or more attention between words.
+
+
+Attention scores are calculated by dot product between Q and K matrices i.e. Q<sup>T</sup>K as shown below
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_11.png" />
+</p>
 
 
 
