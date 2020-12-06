@@ -96,11 +96,38 @@ Above I used embedding size of 4 for illustration. But in paper they used embedd
 
 
 
-Now we know how one sentence pass through encoder, lets see how batch of sentences flows. This is very important becauase in real world we never deal with one sentence. Below is the simple picture that illustrates this
+Now we know how one sentence pass through encoder, lets see how batch of sentences flows. This is very important becauase in real world we never deal with one sentence. Below is the simple picture that illustrates this. Again I used toy embedding of size 4 for illustration.
 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_8.png" />
 </p>
+
+
+Above input representation flows through self attention layer in encoder. This is the heart of transformers. So lets dig deeper
+
+
+#### Self-Attention
+
+
+Consider the sentence *I arrived at the bank after crossing the...*. In this sentence depending on the word which ends the sentence, meaning and appropriate representation of word **bank** changes. For example if ending word is river then this word **bank** refers to bank of the river and if ending word is let's say for example **road** then it refers to finanical instititution. So when we are re-representing a particular word, model needs to look at surrounding words in input sentence for clues that can help lead to a better encoding for this word.
+
+
+> Self Attention is the mechanism Transformer uses to bring in information of other relevant words in to the one we are currently processing
+
+
+So in above example, word **river** would recive high score i.e, when processing word bank to compute new representation, our model would give high attention to word river. We can think of the final score a particular word would get is a weighted combination of representations from all surrounding words.
+
+
+For each word in input sentence, we want to get a score of all remaining words in that sentence. So some how we need to compare each word with all others. This is the main computation involved in self-attention. We want to get something like below
+
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_9.png" />
+</p>
+
+
+
 
 
