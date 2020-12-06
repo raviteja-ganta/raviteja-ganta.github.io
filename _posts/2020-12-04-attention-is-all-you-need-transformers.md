@@ -16,9 +16,10 @@ Historically RNN's like LSTM's and GRU's are widely used architectures for most 
 I will try to explain each and every detail of Transformers in this blog post. Contents are as follows
 
 1) What is Transformer?
+
 2) Overview of Architecture
+
 3) Encoder
-  * 
 
 
 ### What is Transformer?
@@ -70,7 +71,9 @@ Main property of transformer is that each word in input flows throgh its own pat
 Lets understand all the operations that happen in encoder with the help of 3 examples
 
 1) They go to gym everyday
+
 2) He is studying in third grade
+
 3) Red cat sitting on the table
 
 
@@ -85,7 +88,19 @@ As with any NLP task, we first tokenize the sentence and convert in to numbers. 
 Above I used embedding size of 4 for illustration. But in paper they used embedding size of 512. So input will be a list of vectors each of size 512. First input passes through Self Attention layer and then through Feed forward neural network layer
 
 
+#### Positional encoding
 
 
+
+#### 
+
+
+
+Now we know how one sentence pass through encoder, lets see how batch of sentences flows. This is very important becauase in real world we never deal with one sentence. Below is the simple picture that illustrates this
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_8.png" />
+</p>
 
 
