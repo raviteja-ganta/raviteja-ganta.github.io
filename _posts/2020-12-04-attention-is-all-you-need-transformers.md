@@ -129,5 +129,27 @@ For each word in input sentence, we want to get a score of all remaining words i
 
 
 
+**Self-Attention calculation:**
+
+Lets see now how can we calcualte similarity scores as in above fig.
+
+Instead of comparing embedding vectords directly, embeddings are first transformed using two linear layers. One such transformation generates query tensor(Q), the other transformation leads to key tensor(K). Since we are doing self-attention, query and key corresponds to same input sentence.
+
+
+##### Creating Query(Q) and Key(K) matrices
+
+Input representation(Fig.5) is multiplied by WQ matrix(linear layer) to get Q and multiplied by WK matrix to get K. Fig.5 has dimensions of 6X4. We will be using WQ/WK matrix of size 4X4 for illustration. Q/K matrices will have shape 6X4 as shown below
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_10.png" />
+</p>
+
+
+
+
+
+
+
 
 
