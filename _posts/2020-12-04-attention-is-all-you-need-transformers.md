@@ -177,6 +177,24 @@ With above calculation we are re-representing each word in a sentence by taking 
 
 #### Multi-head Attention:
 
+Sometimes its beneficial to get multiple representational subspaces for a word. For example in our sentence *I arrived at the bank after crossing the river* when we calculated our representation Z, even though it uses all other words information to re-represent word **bank**, it could be dominated by the the actual word itself. So authors of paper thought why not use multiple attention heads(which could be applied in parallel using multiple sets of Query/Key/Value weight matrices). Lets try to understand this with a simple example where we used 2 attention heads instead of 1 head which we were used to until now
+
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_13.png" />
+</p>
+
+
+How do we calculate this? Its very simple instead of using one set of Query/Key/Value weight matrices to produce one set of Q,K,V matrices, we use multiple set of Query/Key/Value weight matrices to produce multiple set of Q,K,V matrices. All these calculations will be done in parallel. Lets go step by step using number of attention heads = 2(paper used 8 attention heads)
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_14.png" />
+</p>
+
+
+Now we perform **self-attention** using 2 heads instead of 1 head we are familiar up to as below
 
 
 
