@@ -136,9 +136,9 @@ Lets see now how can we calcualte similarity scores as in above fig.
 Instead of comparing embedding vectords directly, embeddings are first transformed using two linear layers. One such transformation generates query tensor(Q), the other transformation leads to key tensor(K). Since we are doing self-attention, query and key corresponds to same input sentence.
 
 
-##### Creating Query(Q) and Key(K) matrices
+##### Creating Query(Q), Key(K) and Value(V) matrices
 
-Input representation(Fig.5) is multiplied by WQ matrix(linear layer) to get Q and multiplied by WK matrix to get K. Fig.5 has dimensions of 6X4. We will be using WQ/WK matrix of size 4X4 for illustration. Q/K matrices will have shape 6X4 as shown below
+Input representation(Fig.5) is multiplied by WQ matrix(linear layer) to get Q and multiplied by WK matrix to get K. Fig.5 has dimensions of (n_seqXembed_dim) = (6X4). We will be using WQ/WK matrix of size 4X4 for illustration. Q/K matrices will have shape 6X4 as shown below. For self attention Q = K
 
 
 <p align="center">
@@ -157,7 +157,25 @@ Attention scores are calculated by dot product between Q and K matrices i.e. Q<s
 </p>
 
 
+If we see above attention scores are large numbers. Now we apply softmax function per row to bring all these numbers to between 0 and 1. Also good thing is that they add up to 1 for any particular word.
 
+
+We have introduced Query and Key tensors so far. The last piece missing until now is the Value tensor. Valuen tensor is formed by a matrix multiply of the Input representation(Fig.5) with the weight matrix WV whose values were set by backpropagation. The row entries of V are then **related** to the corresponding input embedding. 
+
+The purpose of the dot-product is to 'focus attention' on some of the inputs. Dot product which is softmax(Q<sup>T</sup>K) now has entries appropriately scaled to enhance some values and reduce others. These are now applied to the V entries.
+
+The matrix multiply weights first column of V, representing a section of each of the input embeddings, with the first row of softmax(Q<sup>T</sup>K), representing the similarity of word#0 and each word of the input embedding and deposits the value in Z
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_12.png" />
+</p>
+
+
+With above calculation we are re-representing each word in a sentence by taking in to account all surrounding words information. This is called self-attention. Its **self** because when encoding a particular sentence we are just looking at all other words in that sentence including itself but no where we are referring to other sentences.
+
+
+#### Multi-head Attention:
 
 
 
