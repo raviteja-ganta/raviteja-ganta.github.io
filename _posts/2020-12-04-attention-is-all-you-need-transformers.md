@@ -194,7 +194,22 @@ How do we calculate this? Its very simple instead of using one set of Query/Key/
 </p>
 
 
-Now we perform **self-attention** using 2 heads instead of 1 head we are familiar up to as below
+Now we perform **self-attention** using 2 heads instead of 1 head as we are doing until now. As we know first step is to calculate attention scores using dot product between Query(Q) and Key(K) vectors as shown below
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_15.png" />
+</p>
+
+
+Now we have 2 sets of attention scores corresponding to 2 attention heads, we need to multiply these with Value(V) matrices as before to get final output of self-attention
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_16.png" />
+</p>
+
+
 
 
 
