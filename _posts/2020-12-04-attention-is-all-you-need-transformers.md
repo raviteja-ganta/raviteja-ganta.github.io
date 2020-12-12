@@ -212,4 +212,3 @@ Now we have 2 sets of attention scores corresponding to 2 attention heads, we ne
 
 
 
-
