@@ -210,5 +210,14 @@ Now we have 2 sets of attention scores corresponding to 2 attention heads, we ne
 </p>
 
 
+After applying multi-head attention each word in a sentence will have multiple representations(actually n_head representations where n_head is number of attention heads). But our feed forward layer is expecting one matrix as show in Fig 9 but we have two matrices now in Fig 13. So we need a way to condense this information to one metric. This is done by first concatenating the two metrices and passing through linear layer as shown below
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_17.png" />
+</p>
+
+
+
 
 
