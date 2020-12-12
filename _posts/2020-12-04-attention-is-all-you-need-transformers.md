@@ -219,5 +219,14 @@ After applying multi-head attention each word in a sentence will have multiple r
 
 
 
+**Entire self-attention process is described below**
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_18.png" />
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_19.png" />
+</p>
 
 
