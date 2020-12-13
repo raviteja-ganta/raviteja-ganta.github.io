@@ -270,4 +270,9 @@ Decoder is right most part of architecture that decodes the encoder's encoding o
 </p>
 
 
+#### Inputs and Outputs in decoder
+
+Outputs in transformer are generated token by token and the most recently generated token will be used as input for next time step. This mimics the language modelling generation.
+
+
  
