@@ -230,3 +230,9 @@ After applying multi-head attention each word in a sentence will have multiple r
 </p>
 
 
+
+#### Feed forward Neural network layer
+
+Output of self attention layer will flow through FFNN as shown in Fig 4. FFNN is applied to each position seperately and identically and it consists of 2 layers as shown below.
+
+
