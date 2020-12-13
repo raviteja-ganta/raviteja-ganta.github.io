@@ -241,8 +241,10 @@ Output of self attention layer will flow through FFNN as shown in Fig 4. FFNN is
 </p>
 
 
+#### Residual connections and LayerNorm
+
 Until now we had a look at 2 main components of a encoder layer. Transformer architecture had 6 layers like this and output of one layer will act as input to other layer. But there is one thing which needs to be discussed which is residual connections. We have residual connection around each of two sub layers in encoder layer then followed by layer normalization. Lets understand this with an example below. To facilitate these residual connections, all sub-layers in the model, as well as the embedding
-layers, produce outputs of dimension dmodel = 512. Below image uses toy dimensions of 4 for illustrationi
+layers, produce outputs of dimension dmodel = 512. Below image uses toy dimensions of 4 for illustration
 
 
 <p align="center">
@@ -250,3 +252,22 @@ layers, produce outputs of dimension dmodel = 512. Below image uses toy dimensio
 </p>
 
 
+### Decoder
+
+Decoder is right most part of architecture that decodes the encoder's encoding of input sentence. Decoder works exactly same as encoder except that it has one more attention layer called Encoder-decoder attention. Below is overview of decoder layers.
+
+1) Causal self attention - In a sentence, words only can look at previous words when generating new words. Causal attention allows words to attend to other words that are related, but important thing to keep in mind is, they cannot attend to words in the future since these were not generated yet, they can attend to any word in the past though. This is done by masking future positions.
+
+2) Encoder-decoder attention - For example lets say we are translating english to french. Input to encoder would be english sentence and decoder outputs french sentence. Encoder-decoder attention is the one which helps decoder focus its attention on appropriate places of input sentence. In this layer Queries come from French sentence/previous decoder layer but Values and keys come from output of final encoder layer. This allows every position in the decoder to attend over all positions in the input sequence. This mimics the typical encoder-decoder attention mechanisms in sequence-to-sequence models.
+
+3) Feed forward layer - FFNN is applied to each position seperately and identically similar to encoder side.
+
+4) Residual and LayerNormalization - Similar to encoder, decoder also has residual connections and layer normalization.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_22.png" />
+</p>
+
+
+ 
