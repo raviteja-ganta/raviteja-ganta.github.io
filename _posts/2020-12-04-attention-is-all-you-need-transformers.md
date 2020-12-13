@@ -236,3 +236,6 @@ After applying multi-head attention each word in a sentence will have multiple r
 Output of self attention layer will flow through FFNN as shown in Fig 4. FFNN is applied to each position seperately and identically and it consists of 2 layers as shown below.
 
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_20.png" />
+</p>
