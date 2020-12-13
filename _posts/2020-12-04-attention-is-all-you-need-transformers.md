@@ -239,3 +239,14 @@ Output of self attention layer will flow through FFNN as shown in Fig 4. FFNN is
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_20.png" />
 </p>
+
+
+Until now we had a look at 2 main components of a encoder layer. Transformer architecture had 6 layers like this and output of one layer will act as input to other layer. But there is one thing which needs to be discussed which is residual connections. We have residual connection around each of two sub layers in encoder layer then followed by layer normalization. Lets understand this with an example below. To facilitate these residual connections, all sub-layers in the model, as well as the embedding
+layers, produce outputs of dimension dmodel = 512. Below image uses toy dimensions of 4 for illustrationi
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_21.png" />
+</p>
+
+
