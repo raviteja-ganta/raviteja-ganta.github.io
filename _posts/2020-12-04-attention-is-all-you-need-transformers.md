@@ -338,6 +338,6 @@ Linear layer helps to project output from decoder layers in to higher dimension 
 Entire process is outlined below.
 
 <video width="100%" height="auto" loop autoplay controls>
-  <source src="assets/images/Transformers/transformers.m4v" type="video/m4v">
+  <source src="assets/images/Transformers/transformers.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
