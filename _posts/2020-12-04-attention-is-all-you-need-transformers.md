@@ -289,6 +289,7 @@ Since it is just a variant of self attention, queries and keys come from same se
 Causal self attention works same way as self attention of Encoder except that we need to modify calculation little to take care of above point. This is done by masking future positions. Lets understand this with one sentence but logic would hold true even for batch of sentences.
 
 English sentence: They go to gym everyday
+
 French translation: Ils vont au gym tous les jours
 
 
@@ -296,6 +297,23 @@ French translation: Ils vont au gym tous les jours
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_24.png" />
 </p>
 
+Step by step:
+1) Similar to self-attention we calcuate Q<sup>T</sup>K using French sentence which is matrix C in above fig. Queries(Q) and key(k) both come from same sentence which is French sentence here.
 
+2) Matrix C says how much similar each word in query is to each word in key. This is called attention weight matrix. For example pink strip in matrix C above says how much similar *vont* in query is to each word in key. So far its similar to self-attention. But thing is when we are generating a word in query, we only want to look at words that were generated until then including itself. So for example when generating word *vont*, this word only wants to look at words *Ils* and *vont*. But our similarity matrix has similarity scores even for words that come later. So we want to mask these similarity scores for words which come later.
+
+3) This is done by adding matrix M which has all zeros on diagonal and below and large negative numbers above diagonal. This gives matrix f. Idea is that when we apply softmax in next step these large negative numbers becomes zero as show below.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_25.png" />
+</p>
 
  
+So from matrix a in fig 21 above, when generating word *vant* it has non zero similarity values only for words *Ils* and *vant*. This helps decoder to pay attention to only words that were generated in the past.
+
+
+Steps that come after the masking were exactly the same as in multi-headed self attention we discussed on encoder side.
+
+
+#### Encoder-decoder attention
