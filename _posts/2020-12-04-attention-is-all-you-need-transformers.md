@@ -272,7 +272,30 @@ Decoder is right most part of architecture that decodes the encoder's encoding o
 
 #### Inputs and Outputs in decoder
 
-Outputs in transformer are generated token by token and the most recently generated token will be used as input for next time step. This mimics the language modelling generation.
+Outputs in transformer are generated token by token and the most recently generated token will be used as input for next time step. This mimics the language modelling generation as shown below.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_23.png" />
+</p>
+
+
+#### Causal self attention
+
+Causal self attention allows words to attend to other words that are already generated when generating new word. For example in Fig 19 when generating word *belle* causal self attention allows to attend to only words *C'est* and *une* but not to word *matinee* since matinee is not generated yet.
+
+Since it is just a variant of self attention, queries and keys come from same sentence.
+
+Causal self attention works same way as self attention of Encoder except that we need to modify calculation little to take care of above point. This is done by masking future positions. Lets understand this with one sentence but logic would hold true even for batch of sentences.
+
+English sentence: They go to gym everyday
+French translation: Ils vont au gym tous les jours
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_24.png" />
+</p>
+
 
 
  
