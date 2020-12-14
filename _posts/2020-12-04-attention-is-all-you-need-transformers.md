@@ -333,3 +333,11 @@ Linear layer helps to project output from decoder layers in to higher dimension 
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_26.png" />
 </p>
 
+
+
+Entire process is outlined below.
+
+<video width="100%" height="auto" loop autoplay controls>
+  <source src="assets/images/Transformers/transformers.m4v" type="video/m4v">
+  Your browser does not support the video tag.
+</video>
