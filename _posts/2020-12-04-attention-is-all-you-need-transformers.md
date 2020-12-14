@@ -4,10 +4,15 @@ title:  "Attention is all you need - The Transformer"
 tags: [ Tips, Natural Language Processing, Neural Networks  ]
 featured_image_thumbnail: assets/images/Transformers/tf_1_thumbnail.jpg
 featured_image: assets/images/Transformers/tf_2.jpg
+featured: true
+hidden: true
 ---
 
-This page is in development. Please come back later.
+This page is in development.
 
+This article talks about Transformers architecture.
+
+<!--more-->
 
 ### Background: 
 
@@ -21,6 +26,9 @@ I will try to explain each and every detail of Transformers in this blog post. C
 
 3) Encoder
 
+4) Decoder
+
+5) Final linear layer and softmax
 
 ### What is Transformer?
 
