@@ -297,7 +297,8 @@ French translation: Ils vont au gym tous les jours
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_24.png" />
 </p>
 
-Step by step:
+**Step by step:**
+
 1) Similar to self-attention we calcuate Q<sup>T</sup>K using French sentence which is matrix C in above fig. Queries(Q) and key(k) both come from same sentence which is French sentence here.
 
 2) Matrix C says how much similar each word in query is to each word in key. This is called attention weight matrix. For example pink strip in matrix C above says how much similar *vont* in query is to each word in key. So far its similar to self-attention. But thing is when we are generating a word in query, we only want to look at words that were generated until then including itself. So for example when generating word *vont*, this word only wants to look at words *Ils* and *vont*. But our similarity matrix has similarity scores even for words that come later. So we want to mask these similarity scores for words which come later.
@@ -317,3 +318,18 @@ Steps that come after the masking were exactly the same as in multi-headed self 
 
 
 #### Encoder-decoder attention
+
+This is very similar to self-attention in encoder except that in this case Queries(Q) come from previous decoder layers, Keys(K) and values(V) come from output of final encoder layer. This allows every position in the decoder to attend over all positions in the input sequence.
+
+
+### Final linear layer and softmax
+
+Output of decoder will flow through linear layer and through softmax to turn a vector of words in to actual word. These layers are applied on each individual position if decoder seperately and in parallel as shown below
+
+Linear layer helps to project output from decoder layers in to higher dimension layer(this dimension depends on vocablary). For example if our french vocablary has 20000 words then this linear layer will project our decoder output of any single token in to 20000 dimension vector. Then this 20000 dimensional vector will be passed through softmax layer to convert in to probabilities. Now we select the token with highest probability as the output word at this token position.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_26.png" />
+</p>
+
