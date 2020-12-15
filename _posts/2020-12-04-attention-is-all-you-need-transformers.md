@@ -289,11 +289,11 @@ Decoder is right most part of architecture that decodes the encoder's encoding o
 Outputs in transformer are generated token by token and the most recently generated token will be used as input for next time step. This mimics the language modelling generation as shown below.
 
 
-<div class="img-div-any-width" markdown="0">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_23_new.gif" />
-  <br />
+<video width="70%" height="auto" loop autoplay controls>
+  <source src="assets/images/Transformers/fig 19.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-</div>
 
 #### Causal self attention
 
