@@ -28,16 +28,23 @@ I will try to explain each and every detail of Transformers in this blog post. C
 * Encoder
 
   1) Positional encoding
+  
   2) Self-Attention
-  3) Self-Attention calculation:
-  4) Multi-head Attention:
+  
+  3) Self-Attention calculation
+  
+  4) Multi-head Attention
+  
   5) Feed forward Neural network layer
+  
   6) Residual connections and LayerNorm
 
 * Decoder
 
   1) Inputs and Outputs in decoder
+  
   2) Causal self attention
+  
   3) Encoder-decoder attention
 
 * Final linear layer and softmax
