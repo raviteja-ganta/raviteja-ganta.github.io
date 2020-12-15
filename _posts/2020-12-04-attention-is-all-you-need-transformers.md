@@ -33,19 +33,19 @@ I will try to explain each and every detail of Transformers in this blog post. C
 
 ### What is Transformer?
 
-The Transformer a architecture whose main goal is to solve sequence-to-sequence tasks while handling long-range dependencies with ease. It totally can take advantage of parallelization and relies on [attention mechanism](https://arxiv.org/pdf/1508.04025v5.pdf) to draw global dependencies between input and output
+The Transformer is an architecture whose main goal is to solve sequence-to-sequence tasks while handling long-range dependencies with ease. It totally can take advantage of parallelization and relies on [attention mechanism](https://arxiv.org/pdf/1508.04025v5.pdf) to draw global dependencies between input and output.
 
-In [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) paper, transformer was used mainly for machine translation. So lets keep our discussion in that domain when going through different components. Lets say for example our goal is to translate english sentence in to french sentence
+In [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) paper, transformer was used mainly for machine translation. So lets keep our discussion in that domain when going through different components. Lets say for example our goal is to translate english sentence in to french sentence.
 
 
 ### Overview of Architecture:
 
 Transformer contains two main components.
 
-1) Encoder
-2) Decoder
+* Encoder
+* Decoder
 
-Input to Encoder would be English sentence and decoder outputs corresponding french sentence. Below is simple diagram showing how transformer is structured
+Input to Encoder would be the english sentence and decoder outputs corresponding french sentence. Below is simple diagram showing how transformer is structured
 
 
 <p align="center">
@@ -53,7 +53,7 @@ Input to Encoder would be English sentence and decoder outputs corresponding fre
 </p>
 
 
-Looking at above picture, one might say that this looks exactly like sequence to sequence machine translation using RNN's where encoder takes input and decoder produces output. But all the magic happens inside big boxes above encoder/decoder where instead of sequential processing we have parallel processing and relies on 3 types of attention. So lets have a look at each component in detail.
+Looking at above picture, one might say that this looks exactly like sequence to sequence machine translation using RNN's where encoder takes input and decoder produces output. But all the magic happens inside the big boxes above(encoder/decoder) where instead of sequential processing we have parallel processing and relies on 3 types of attention. So lets have a look at each component in detail.
 
 
 ### Encoder:
@@ -86,7 +86,7 @@ Lets understand all the operations that happen in encoder with the help of 3 exa
 3) Red cat sitting on the table
 
 
-As with any NLP task, we first tokenize the sentence and convert in to numbers. After that we convert each number(corresponding to a word) in a sentence in to word embeddings. First will see how one sentence flows through encoder using vectors and slowly will transition in to using matrices for batch of sentences
+As with any NLP task, we first tokenize the sentence and convert in to numbers. After that, we convert each number(corresponding to a word) in a sentence in to word embeddings. First will see how one sentence flows through encoder using vectors and slowly will transition in to using matrices for batch of sentences
 
 
 <p align="center">
@@ -99,9 +99,9 @@ Above I used embedding size of 4 for illustration. But in paper they used embedd
 
 #### Positional encoding
 
+Our transformer model do not care about actual ordering of words(all words are processed in parallel and they see all other words during attention). But for our model to make use of order of sequence, we must add some information about relative or absolute position of the tokens in the sequence. In other words to give model a sense of the order of words, we add *Positional encoding* to the embedding vectors. This is done both on encoder and decoder side.
 
-
-#### 
+The positional encodings have the same dimension as the embeddings, so that the two can be summed. Formula for calculating positional encoding is given in section 3.5 of the [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) paper.
 
 
 
@@ -119,7 +119,7 @@ Above input representation flows through self attention layer in encoder. This i
 #### Self-Attention
 
 
-Consider the sentence *I arrived at the bank after crossing the...*. In this sentence depending on the word which ends the sentence, meaning and appropriate representation of word **bank** changes. For example if ending word is river then this word **bank** refers to bank of the river and if ending word is let's say for example **road** then it refers to finanical instititution. So when we are re-representing a particular word, model needs to look at surrounding words in input sentence for clues that can help lead to a better encoding for this word.
+Consider the sentence *I arrived at the bank after crossing the...*. In this sentence depending on the word which ends the sentence, meaning and appropriate representation of the word **bank** changes. For example if ending word is river then this word **bank** refers to bank of the river and if ending word is let's say for example **road** then it refers to finanical instititution. So when we are re-representing a particular word, model needs to look at surrounding words in input sentence for clues that can help lead to a better encoding for this word.
 
 
 > Self Attention is the mechanism Transformer uses to bring in information of other relevant words in to the one we are currently processing
@@ -140,7 +140,7 @@ For each word in input sentence, we want to get a score of all remaining words i
 
 #### Self-Attention calculation:
 
-Lets see now how can we calcualte similarity scores as in above fig.
+Lets see now how we can calcualte similarity scores as in above fig.
 
 Instead of comparing embedding vectords directly, embeddings are first transformed using two linear layers. One such transformation generates query tensor(Q), the other transformation leads to key tensor(K). Since we are doing self-attention, query and key corresponds to same input sentence.
 
@@ -166,7 +166,7 @@ Attention scores are calculated by dot product between Q and K matrices i.e. Q<s
 </p>
 
 
-If we see above attention scores are large numbers. Now we apply softmax function per row to bring all these numbers to between 0 and 1. Also good thing is that they add up to 1 for any particular word.
+If we see above, attention scores are large numbers. Now we apply softmax function per row to bring all these numbers to between 0 and 1. Also good thing is that they add up to 1 for any particular word.
 
 
 We have introduced Query and Key tensors so far. The last piece missing until now is the Value tensor. Valuen tensor is formed by a matrix multiply of the Input representation(Fig.5) with the weight matrix WV whose values were set by backpropagation. The row entries of V are then **related** to the corresponding input embedding. 
@@ -186,7 +186,7 @@ With above calculation we are re-representing each word in a sentence by taking 
 
 #### Multi-head Attention:
 
-Sometimes its beneficial to get multiple representational subspaces for a word. For example in our sentence *I arrived at the bank after crossing the river* when we calculated our representation Z, even though it uses all other words information to re-represent word **bank**, it could be dominated by the the actual word itself. So authors of paper thought why not use multiple attention heads(which could be applied in parallel using multiple sets of Query/Key/Value weight matrices). Lets try to understand this with a simple example where we used 2 attention heads instead of 1 head which we were used to until now
+Sometimes its beneficial to get multiple representational subspaces for a word. For example in our sentence *I arrived at the bank after crossing the river*, when we calculated our representation Z, even though it uses all other words information to re-represent word **bank**, it could be dominated by the the actual word itself. So authors of paper thought why not use multiple attention heads(which could be applied in parallel using multiple sets of Query/Key/Value weight matrices). Lets try to understand this with a simple example where we used 2 attention heads instead of 1 head which we were used to until now
 
 
 
@@ -195,7 +195,7 @@ Sometimes its beneficial to get multiple representational subspaces for a word. 
 </p>
 
 
-How do we calculate this? Its very simple instead of using one set of Query/Key/Value weight matrices to produce one set of Q,K,V matrices, we use multiple set of Query/Key/Value weight matrices to produce multiple set of Q,K,V matrices. All these calculations will be done in parallel. Lets go step by step using number of attention heads = 2(paper used 8 attention heads)
+How do we calculate this? Its very simple. Instead of using one set of Query/Key/Value weight matrices to produce one set of Q,K,V matrices, we use multiple set of Query/Key/Value weight matrices to produce multiple set of Q,K,V matrices. All these calculations will be done in parallel. Lets go step by step using number of attention heads = 2(paper used 8 attention heads)
 
 
 <p align="center">
@@ -267,7 +267,7 @@ Decoder is right most part of architecture that decodes the encoder's encoding o
 
 1) Causal self attention - In a sentence, words only can look at previous words when generating new words. Causal attention allows words to attend to other words that are related, but important thing to keep in mind is, they cannot attend to words in the future since these were not generated yet, they can attend to any word in the past though. This is done by masking future positions.
 
-2) Encoder-decoder attention - For example lets say we are translating english to french. Input to encoder would be english sentence and decoder outputs french sentence. Encoder-decoder attention is the one which helps decoder focus its attention on appropriate places of input sentence. In this layer Queries come from French sentence/previous decoder layer but Values and keys come from output of final encoder layer. This allows every position in the decoder to attend over all positions in the input sequence. This mimics the typical encoder-decoder attention mechanisms in sequence-to-sequence models.
+2) Encoder-decoder attention - For example lets say we are translating english to french. Input to encoder would be english sentence and decoder outputs french sentence. Encoder-decoder attention is the one which helps decoder focus its attention on appropriate places of input sentence. In this layer, Queries come from French sentence/previous decoder layer but Values and keys come from output of final encoder layer. This allows every position in the decoder to attend over all positions in the input sequence. This mimics the typical encoder-decoder attention mechanisms in sequence-to-sequence models.
 
 3) Feed forward layer - FFNN is applied to each position seperately and identically similar to encoder side.
 
@@ -291,11 +291,13 @@ Outputs in transformer are generated token by token and the most recently genera
 
 #### Causal self attention
 
-Causal self attention allows words to attend to other words that are already generated when generating new word. For example in Fig 19 when generating word *belle* causal self attention allows to attend to only words *C'est* and *une* but not to word *matinee* since matinee is not generated yet.
+Causal self attention allows words to attend to other words that are already generated when generating new word. For example in Fig 19, when generating word *belle* causal self attention allows to attend to only words *C'est* and *une* but not to word *matinee* since matinee is not generated yet.
+
+Causal self attention works same way as self attention of Encoder except that we need to modify calculation little to take care of above point. This is done by masking future positions. Lets understand this with one sentence but logic would hold true even for batch of sentences.
+
 
 Since it is just a variant of self attention, queries and keys come from same sentence.
 
-Causal self attention works same way as self attention of Encoder except that we need to modify calculation little to take care of above point. This is done by masking future positions. Lets understand this with one sentence but logic would hold true even for batch of sentences.
 
 English sentence: They go to gym everyday
 
@@ -333,7 +335,7 @@ This is very similar to self-attention in encoder except that in this case Queri
 
 ### Final linear layer and softmax
 
-Output of decoder will flow through linear layer and through softmax to turn a vector of words in to actual word. These layers are applied on each individual position if decoder seperately and in parallel as shown below
+Output of decoder will flow through linear layer and through softmax to turn a vector of words in to actual word. These layers are applied on each individual position of decoder seperately and in parallel as shown below
 
 Linear layer helps to project output from decoder layers in to higher dimension layer(this dimension depends on vocablary). For example if our french vocablary has 20000 words then this linear layer will project our decoder output of any single token in to 20000 dimension vector. Then this 20000 dimensional vector will be passed through softmax layer to convert in to probabilities. Now we select the token with highest probability as the output word at this token position.
 
@@ -350,3 +352,12 @@ Entire process is outlined below.
   <source src="assets/images/Transformers/transformers.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
+References:
+
+1) Attention is all you need. (Vaswani et al., 2017)
+
+2) Natural language processing specialization - Courseera
+
+3) NLP stanford lecture by Ashish Vaswani.
