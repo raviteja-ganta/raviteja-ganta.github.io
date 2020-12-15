@@ -48,9 +48,12 @@ Transformer contains two main components.
 Input to Encoder would be the english sentence and decoder outputs corresponding french sentence. Below is simple diagram showing how transformer is structured
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_4.png" />
-</p>
+
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_4_new.gif" />
+  <br />
+
+</div>
 
 
 Looking at above picture, one might say that this looks exactly like sequence to sequence machine translation using RNN's where encoder takes input and decoder produces output. But all the magic happens inside the big boxes above(encoder/decoder) where instead of sequential processing we have parallel processing and relies on 3 types of attention. So lets have a look at each component in detail.
@@ -89,9 +92,11 @@ Lets understand all the operations that happen in encoder with the help of 3 exa
 As with any NLP task, we first tokenize the sentence and convert in to numbers. After that, we convert each number(corresponding to a word) in a sentence in to word embeddings. First will see how one sentence flows through encoder using vectors and slowly will transition in to using matrices for batch of sentences
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_7.png" />
-</p>
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_7_new.gif" />
+  <br />
+
+</div>
 
 
 Above I used embedding size of 4 for illustration. But in paper they used embedding size of 512. So input will be a list of vectors each of size 512. First input passes through Self Attention layer and then through Feed forward neural network layer
@@ -284,10 +289,11 @@ Decoder is right most part of architecture that decodes the encoder's encoding o
 Outputs in transformer are generated token by token and the most recently generated token will be used as input for next time step. This mimics the language modelling generation as shown below.
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_23.png" />
-</p>
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Transformers/tf_23_new.gif" />
+  <br />
 
+</div>
 
 #### Causal self attention
 
