@@ -62,9 +62,12 @@ But before we move on to distillation procedure, lets spend time on how model ac
 
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Distill_knowledge/dk_5.png" />
-</p>
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Distill_knowledge/exampl network.gif" />
+  <br />
+
+</div>
+
 
 
 Formula for calculating softmax is given as
@@ -124,9 +127,10 @@ Below is flowchart of entire training process
 
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Distill_knowledge/dk_9.png" />
-</p>
+<video width="100%" height="auto" loop autoplay controls>
+  <source src="assets/images/Distill_knowledge/entire training.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 
