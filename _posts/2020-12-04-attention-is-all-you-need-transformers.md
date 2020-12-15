@@ -21,15 +21,28 @@ Historically RNN's like LSTM's and GRU's are widely used architectures for most 
 
 I will try to explain each and every detail of Transformers in this blog post. Contents are as follows
 
-1) What is Transformer?
+* What is Transformer?
 
-2) Overview of Architecture
+* Overview of Architecture
 
-3) Encoder
+* Encoder
 
-4) Decoder
+  1) Positional encoding
+  2) Self-Attention
+  3) Self-Attention calculation:
+  4) Multi-head Attention:
+  5) Feed forward Neural network layer
+  6) Residual connections and LayerNorm
 
-5) Final linear layer and softmax
+* Decoder
+
+  1) Inputs and Outputs in decoder
+  2) Causal self attention
+  3) Encoder-decoder attention
+
+* Final linear layer and softmax
+
+
 
 ### What is Transformer?
 
