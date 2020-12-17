@@ -9,9 +9,8 @@ hidden: true
 ---
 
 
-This page is in development.
+This article talk about the famous Transformers architecture in Natural Language Processing.
 
-This article talks about Transformers architecture.
 
 <!--more-->
 
