@@ -383,6 +383,6 @@ References:
 
 1) Attention is all you need. (Vaswani et al., 2017)
 
-2) Natural language processing specialization - Courseera
+2) Natural language processing specialization - CourseEra
 
 3) NLP stanford lecture by Ashish Vaswani.
