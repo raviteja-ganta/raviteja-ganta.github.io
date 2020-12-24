@@ -228,4 +228,13 @@ In above fig, input is processed with chunks of size 4. So instead of storing en
 Reformer takes the soul of the transformer and each part of it is re-engineered very efficiently using LSH attention, Reversible residual networks, and Chunked feed forward layers so that it can be executed efficiently on long sequences even for models with a large number of layers.
 
 
+References:
+
+1) Reformer: The Efficient Transformer(Nikita Kitaev et al., 2020)
+
+2) Natural language processing specialization - Coursera
+
+3) [Google AI blog on Reformer](https://ai.googleblog.com/2020/01/reformer-efficient-transformer.html)
+
+4) The Reformer - Pushing the limits of language modeling by HuggingFace
 
