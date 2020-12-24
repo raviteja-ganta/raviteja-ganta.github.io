@@ -6,6 +6,8 @@ featured_image_thumbnail: assets/images/Reformers/rf_0_thumbnail.png
 featured_image: assets/images/Reformers/rf_0.png
 ---
 
+This article talks about the Reformer architecture in NLP which solves the memory efficiency challenge faced by Transformers architecture for long sequences.
+
 
 *Knowledge about transformer architecture is necessary to understand this article. For those who are new to transformer architecture have a look at [Transformers](https://raviteja-ganta.github.io/attention-is-all-you-need-transformers)*
 
