@@ -7,8 +7,7 @@ featured_image: assets/images/Reformers/rf_0.png
 ---
 
 
-*Knowledge about transformer architecture is necessary to understand this article. For those who are new to transformer architecture have a look at [Transformers]
-(https://raviteja-ganta.github.io/attention-is-all-you-need-transformers).*
+*Knowledge about transformer architecture is necessary to understand this article. For those who are new to transformer architecture have a look at [Transformers](https://raviteja-ganta.github.io/attention-is-all-you-need-transformers)*
 
 
 ### Transformer Complexity:
