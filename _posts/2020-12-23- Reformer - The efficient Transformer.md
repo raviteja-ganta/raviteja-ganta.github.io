@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reformer - The efficient Transformer"
+title:  "Reformer - The Efficient Transformer"
 tags: [ Tips, Natural Language Processing, Neural Networks  ]
 featured_image_thumbnail: assets/images/Reformers/rf_0_thumbnail.png
 featured_image: assets/images/Reformers/rf_0.png
