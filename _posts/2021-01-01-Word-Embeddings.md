@@ -2,8 +2,8 @@
 layout: post
 title:  "Word Embeddings and Word2Vec"
 tags: [ Tips, Natural Language Processing, Neural Networks  ]
-featured_image_thumbnail: assets/images/Transformers/we_0_thumbnail.png
-featured_image: assets/images/Transformers/we_0.png
+featured_image_thumbnail: assets/images/word embeddings/we_0_thumbnail.png
+featured_image: assets/images/word embeddings/we_0.png
 ---
 
 
