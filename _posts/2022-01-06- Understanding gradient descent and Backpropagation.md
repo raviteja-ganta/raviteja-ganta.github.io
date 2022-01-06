@@ -77,6 +77,11 @@ $$
 \end{align}
 $$
 
+
+
+
+
+
 $$ x = y^2 $$
 
 In N-dimensional simplex noise, the squared kernel summation radius $r^2$ is $\frac 1 2$
