@@ -1,6 +1,5 @@
 ---
 layout: post
-mathjax: true
 title:  "Understanding gradient descent and Backpropagation"
 tags: [ Tips, Neural Networks]
 featured_image_thumbnail: assets/images/Transformers/tf_1_thumbnail.jpg
