@@ -65,7 +65,7 @@ We use equation 1 from above to calulate activations for every layer but all cal
 
 Main goal of backpropagation is to understand how varying individiual weights of network changes the errors made by the network. But how do we calculate error made by the nextwork. We use term called cost function to get estimate of error. Cost gives estimate of how bad or good our network predictions are. This is function of actual label and predicted value
 
-$$ x = y^2 $$
+$$g_{linear}(z) = z$$
 
 
 <img src="https://render.githubusercontent.com/render/math?math=\LARGE C = f(y^i,yhat)"> 
