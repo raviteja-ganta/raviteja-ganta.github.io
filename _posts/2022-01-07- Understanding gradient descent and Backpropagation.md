@@ -6,6 +6,7 @@ featured_image_thumbnail: assets/images/Transformers/tf_1_thumbnail.jpg
 featured_image: assets/images/Transformers/tf_2.jpg
 ---
 
+*This post is under development. Please come back later
 
 Gradient descent and backpropagation are workhorse behind training neural networks and understanding what's happeing inside these algorithms is atmost importance
 for efficient learning. This post gives in depth explanation of gradient descent and Backpropagation for training neural networks.
