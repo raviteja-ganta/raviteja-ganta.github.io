@@ -140,5 +140,5 @@ So if two words have similar context(i.e., same words surrounding them) then our
 
 
 
-
+$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
 
