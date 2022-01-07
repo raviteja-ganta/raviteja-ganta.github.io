@@ -74,7 +74,10 @@ $$C = \frac{1}{n} \sum_{x} c_x$$
 
 Lets use quadratic cost for illustration in our example which is $$c_x = \frac{1}{2} (y^i - yhat)^2$$. Here yhat would be exactly same as activations/output of final layer of neural network
 
-$$c_x = \frac{1}{2} (y^i - a^[L])^2$$
+$$c_x = \frac{1}{2} (y^i - a^[^L^])^2$$
+
+$$a^[^L^]$$ is a vector as shown in fig.3 and L = 2 for our example neural network of fig.1. Since $$y^i$$ is fixed for any training example, so cost $$c_x$$ is function of $$a^[^L^]$$
+
 
 
 
