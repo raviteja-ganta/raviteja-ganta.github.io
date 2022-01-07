@@ -72,9 +72,11 @@ We usually get cost for individual training example and overall cost would be av
 
 $$C = \frac{1}{n} \sum_{x} c_x$$
 
-Lets use quadratic cost for illustration in our example which is $$c_x = \frac{1}{2} (y^i - yhat)^2. Here yhat would be exactly same as activations/output of final layer of neural network
+Lets use quadratic cost for illustration in our example which is $$c_x = \frac{1}{2} (y^i - yhat)^2$$. Here yhat would be exactly same as activations/output of final layer of neural network
 
-$$c_x = \frac{1}{2} (y^i - a^[L])^2
+$$c_x = \frac{1}{2} (y^i - a^[L])^2$$
+
+
 
 $$
 \begin{align}
