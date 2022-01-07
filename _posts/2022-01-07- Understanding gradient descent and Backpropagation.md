@@ -78,8 +78,10 @@ $$c_x = \frac{1}{2} (y^i - a^{[L]})^2$$
 
 $$a^{[L]}$$ is a vector as shown in fig.3 and L = 2 for our example neural network of fig.1. Since $$y^i$$ is fixed for any training example, so cost $$c_x$$ is function of $$a^{[L]}$$
 
+> Back propagation is all about understanding how changing the weights and biases in a network changes the cost function $$c_x$$
 
 
+Using Back propagation we calculate $$\frac{\partial c_x }{\partial w}$$ and $$\frac{\partial c_x }{\partial b}$$ for single training example and then from this we can calculate $$\frac{\partial C }{\partial w}$$ and $$\frac{\partial C }{\partial b}$$ by overaging over training examples
 
 $$
 \begin{align}
