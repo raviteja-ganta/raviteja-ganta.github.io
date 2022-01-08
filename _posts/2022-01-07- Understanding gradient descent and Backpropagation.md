@@ -106,6 +106,19 @@ For our example cost function $$c_x = \frac{1}{2} (y^i - a^{[L]})^2$$,
 $$\frac{\partial c_x }{\partial a_{j}^{[l]}} = \frac{1}{2} * 2 * (y_j - a_{j}^{[l]}) * (-1) = (a_{j}^{[l]} - y_j)$$
 
 
+#### Equation 2 - Error of a layer in terms of error of next layer
+
+$$e_j^{[l]} = \sum_{k} w_{kj}^{[l+1]} e_{k}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})$$
+
+So once we know error in latter layers, this equation implies we can calculate error in initial layers. So by using equation 1 and equation 2, we can compute error $$e_j^{[l]}$$ for any layer in the network.
+
+#### Equation 3
+
+$$\frac{\partial c_x }{\partial b_{j}^{[l]}} = e_j^{[l]}$$
+
+
+
+
 
 $$
 \begin{align}
