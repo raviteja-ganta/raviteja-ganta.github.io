@@ -89,7 +89,9 @@ Lets say we change our parameters and biases coming in to a neuron *j* of layer 
 
 $$z_j^{[l]} = \sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]}$$
 
+So as we change parameters $$w_{jk}^{[l]}$$ and $$b_{j}^{[l]}$$ corresponding to any neuron *j* of layer *l* then output $$z_j^{[l]}$$ generated in that neuron also changes and this in turn finally change our cost function $$c_x$$. We can write this change as $$\frac{\partial c_x }{\partial z_{j}^{[l]}}$$. So we can define contribution of change/error from this single neuron as 
 
+$$\frac{\partial c_x }{\partial z_{j}^{[l]}}$$
 
 
 $$
