@@ -99,7 +99,7 @@ Using Backpropagation we can compute $$e_j^{[l]}$$ first and then derive $$\frac
 
 #### Equation 1 - Equation for error in output layer $$e_j^{[L]}$$
 
-$$e_j^{[L]} = \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})$$      - eq 1
+$$e_j^{[L]} = \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})$$      
 
 For our example cost function $$c_x = \frac{1}{2} (y^i - a^{[L]})^2$$,
 
@@ -108,17 +108,17 @@ $$\frac{\partial c_x }{\partial a_{j}^{[l]}} = \frac{1}{2} * 2 * (y_j - a_{j}^{[
 
 #### Equation 2 - Error of a layer in terms of error of next layer
 
-$$e_j^{[l]} = \sum_{k} w_{kj}^{[l+1]} e_{k}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})$$           - eq 2
+$$e_j^{[l]} = \sum_{k} w_{kj}^{[l+1]} e_{k}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})$$           
 
 So once we know error in latter layers, this equation implies we can calculate error in initial layers. So by using equation 1 and equation 2, we can compute error $$e_j^{[l]}$$ for any layer in the network.
 
 #### Equation 3 - Rate of change of cost with respect to bias
 
-$$\frac{\partial c_x }{\partial b_{j}^{[l]}} = e_j^{[l]}$$                                    - eq 3
+$$\frac{\partial c_x }{\partial b_{j}^{[l]}} = e_j^{[l]}$$                         
 
 #### Equation 4 - Rate of change of cost with respect to NN weights
 
-$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_jk^{[l-1]} e_j^{[l]}$$                      - eq 4
+$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_jk^{[l-1]} e_j^{[l]}$$              
 
 
 Now lets try to prove the above 4 equations and get some intuition of what we are getting from them. But before that lets understand chain rule of calculus which we help us going forward 
