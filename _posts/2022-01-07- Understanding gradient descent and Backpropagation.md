@@ -169,6 +169,15 @@ This is exact equation 1
 
 #### Proof of equation 2
 
+We know the error from single neuron as $$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
+
+Lets use example 2 layers of a neural network to understand how we can use chain rule here 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp7.png" />
+</p>
+
+
 
 
 
