@@ -108,17 +108,17 @@ $$\frac{\partial c_x }{\partial a_{j}^{[l]}} = \frac{1}{2} * 2 * (y_j - a_{j}^{[
 
 #### Equation 2 - Error of a layer in terms of error of next layer
 
-$$e_j^{[l]} = \sum_{k} w_{kj}^{[l+1]} e_{k}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})$$           
+$$e_j^{[l]} = \sum_{k} w_{kj}^{[l+1]} e_{k}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})\tag{2}$$           
 
 So once we know error in latter layers, this equation implies we can calculate error in initial layers. So by using equation 1 and equation 2, we can compute error $$e_j^{[l]}$$ for any layer in the network.
 
 #### Equation 3 - Rate of change of cost with respect to bias
 
-$$\frac{\partial c_x }{\partial b_{j}^{[l]}} = e_j^{[l]}$$                         
+$$\frac{\partial c_x }{\partial b_{j}^{[l]}} = e_j^{[l]}\tag{3}$$                         
 
 #### Equation 4 - Rate of change of cost with respect to NN weights
 
-$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_jk^{[l-1]} e_j^{[l]}$$              
+$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_jk^{[l-1]} e_j^{[l]}\tag{4}$$              
 
 
 Now lets try to prove the above 4 equations and get some intuition of what we are getting from them. But before that lets understand chain rule of calculus which we help us going forward 
@@ -155,20 +155,19 @@ $$a_j^{[L]} = g_{\text{activ}}(z_{j}^{[L]})$$
 
 Now we can apply chain rule to above chain of equations and substituting $$a_j^{[L]}$$ for $$g_{\text{activ}}(z_{j}^{[L]})$$
 
-$$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
-
 $$
 \begin{align}
 e_j^{[L]} &= \frac{\partial c_x }{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial a_{j}^{[L]} }{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial g_{\text{activ}}(z_{j}^{[L]})}{\partial z_{j}^{[L]}} \\
-&= \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]}) 
+&= \color{blue}{\frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})}
 \end{align}
 $$
 
 
 This is exact equation 1
 
+#### Proof of equation 2
 
 
 
