@@ -97,10 +97,13 @@ Using Backpropagation we can compute $$e_j^{[l]}$$ first and then derive $$\frac
 
 ### Main equations of Backpropagation
 
-#### Equation 1 - Equation for error in output layer $$e_j^{[L]}
+#### Equation 1 - Equation for error in output layer $$e_j^{[L]}$$
 
 $$e_j^{[L]} = \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})$$
 
+For our example cost function $$c_x = \frac{1}{2} (y^i - a^{[L]})^2$$,
+
+$$\frac{\partial c_x }{\partial a_{j}^{[l]}} = \frac{1}{2} * 2 * (y_j - a_{j}^{[l]}) * (-1) = (a_{j}^{[l]} - y_j)$$
 
 
 
