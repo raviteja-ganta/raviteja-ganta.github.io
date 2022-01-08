@@ -132,7 +132,7 @@ Lets say we have 3 variables and they are related as shown below
 </p>
 
 
-$$\frac{\partial c }{\partial z} = \frac{\partial c }{\partial a} * \frac{\partial a }{\partial z} 
+$$\frac{\partial c }{\partial z} = \frac{\partial c }{\partial a} * \frac{\partial a }{\partial z}$$
 
 ### Proof of 4 equations of Back Propagation
 
