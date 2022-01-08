@@ -132,8 +132,44 @@ Lets say we have 3 variables and they are related as shown below
 </p>
 
 
+$$\frac{\partial c }{\partial z} = \frac{\partial c }{\partial a} * \frac{\partial a }{\partial z} 
 
-#### Proof of 4 equations of Back Propagation
+### Proof of 4 equations of Back Propagation
+
+
+#### Proof of equation 1
+
+We have shown above that error from single neuron as $$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
+
+Lets see again the simple calculations happening inside one single neuron of last layer L
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp6.png" />
+</p>
+
+So, in equation form we can write as 
+
+$$z_j^{[L]} = \sum_{k} w_{jk}^{[L]} a_{k}^{[L-1]} + b_{j}^{[L]}$$
+
+$$a_j^{[L]} = g_{\text{activ}}(z_{j}^{[L]})$$
+
+Now we can apply chain rule to above chain of equations and substituting $$a_j^{[L]}$$ for $$g_{\text{activ}}(z_{j}^{[L]})$$
+
+$$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
+
+$$
+\begin{align}
+$$e_j^{[L]} = \frac{\partial c_x }{\partial z_{j}^{[L]}} \\
+&= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial a_{j}^{[L]} }{\partial z_{j}^{[L]}} 
+&= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial g_{\text{activ}}(z_{j}^{[L]})}{\partial z_{j}^{[L]}} 
+&= \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})$$   
+\end{align}
+$$
+
+
+
+
+
 
 
 
