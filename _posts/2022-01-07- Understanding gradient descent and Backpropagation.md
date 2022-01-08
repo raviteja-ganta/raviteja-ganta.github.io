@@ -99,7 +99,7 @@ Using Backpropagation we can compute $$e_j^{[l]}$$ first and then derive $$\frac
 
 #### Equation 1 - Equation for error in output layer $$e_j^{[L]}$$
 
-$$e_j^{[L]} = \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})$$      
+$$e_j^{[L]} = \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})\tag{1}$$      
 
 For our example cost function $$c_x = \frac{1}{2} (y^i - a^{[L]})^2$$,
 
@@ -159,13 +159,15 @@ $$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
 
 $$
 \begin{align}
-e_j^{[L]} = \frac{\partial c_x }{\partial z_{j}^{[L]}} \\
+e_j^{[L]} &= \frac{\partial c_x }{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial a_{j}^{[L]} }{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial g_{\text{activ}}(z_{j}^{[L]})}{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]}) 
 \end{align}
 $$
 
+
+This is exact equation 1
 
 
 
