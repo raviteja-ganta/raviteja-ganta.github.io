@@ -81,7 +81,7 @@ $$a^{[L]}$$ is a vector as shown in fig.3 and L = 2 for our example neural netwo
 > Back propagation is all about understanding how changing the weights and biases in a network changes the cost function $$c_x$$
 
 
-Using Back propagation we calculate $$\frac{\partial c_x }{\partial w}$$ and $$\frac{\partial c_x }{\partial b}$$ for single training example and then from this we can calculate $$\frac{\partial C }{\partial w}$$ and $$\frac{\partial C }{\partial b}$$ by overaging over training examples
+Using Back propagation we calculate $$\frac{\partial c_x }{\partial w}$$ and $$\frac{\partial c_x }{\partial b}$$ for single training example and then from this we can calculate $$\frac{\partial C }{\partial w}$$ and $$\frac{\partial C }{\partial b}$$ by overaging over training examples. If we see per node, then our goal is to find $$\frac{\partial C }{\partial w_{jk}^{[l]}}$$ and $$\frac{\partial C }{\partial b_{j}^{[l]}}$$ for any layer *l* . 
 
 $$
 \begin{align}
