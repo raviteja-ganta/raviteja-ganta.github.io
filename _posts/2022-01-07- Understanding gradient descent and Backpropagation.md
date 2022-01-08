@@ -157,7 +157,7 @@ Now we can apply chain rule to above chain of equations and substituting $$a_j^{
 
 $$
 \begin{align}
-e_j^{[L]} &= \frac{\partial c_x }{\partial z_{j}^{[L]}} \\
+\color{blue}{e_j^{[L]}} &= \frac{\partial c_x }{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial a_{j}^{[L]} }{\partial z_{j}^{[L]}} \\
 &= \frac{\partial c_x }{\partial a_{j}^{[L]}} \frac{\partial g_{\text{activ}}(z_{j}^{[L]})}{\partial z_{j}^{[L]}} \\
 &= \color{blue}{\frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})}
