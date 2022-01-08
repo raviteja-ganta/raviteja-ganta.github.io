@@ -91,7 +91,17 @@ $$z_j^{[l]} = \sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]}$$
 
 So as we change parameters $$w_{jk}^{[l]}$$ and $$b_{j}^{[l]}$$ corresponding to any neuron *j* of layer *l* then output $$z_j^{[l]}$$ generated in that neuron also changes and this in turn finally change our cost function $$c_x$$. We can write this change as $$\frac{\partial c_x }{\partial z_{j}^{[l]}}$$. So we can define contribution of change/error from this single neuron as 
 
-$$\frac{\partial c_x }{\partial z_{j}^{[l]}}$$
+$$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
+
+Using Backpropagation we can compute $$e_j^{[l]}$$ first and then derive $$\frac{\partial c_x }{\partial w_{jk}^{[l]}}$$ and $$\frac{\partial c_x }{\partial b_{j}^{[l]}}$$ from this error.
+
+### Main equations of Backpropagation
+
+#### Equation 1 - Equation for error in output layer $$e_j^{[L]}
+
+$$e_j^{[L]} = \frac{\partial c_x }{\partial a_{j}^{[L]}} g'_{\text{activ}}(z_{j}^{[l]})$$
+
+
 
 
 $$
