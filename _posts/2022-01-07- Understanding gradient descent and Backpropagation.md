@@ -182,13 +182,14 @@ Using above fig 6 and chain rule we can write error in neuron j of layer l as
 $$
 \begin{align}
 \{e_j^{[l]}} &= \frac{\partial c_x }{\partial z_{j}^{[l]}} \\
-&= \frac{\partial c_x }{\partial z_{1}^{[l+1]}} \frac{\partial z_{1}^{[l+1]} }{\partial z_{j}^{[l]}} + \frac{\partial c_x }{\partial z_{2}^{[l+1]}} \frac{\partial z_{2}^{[l+1]} }{\partial z_{j}^{[l]}} \\
-&= \sum_{k=2} \frac{\partial c_x }{\partial z_{k}^{[l+1]}} \frac{\partial z_{k}^{[l+1]}} }{\partial z_{j}^{[l]}}
+&= \frac{\partial c_x }{\partial z_{1}^{[l+1]}} \frac{\partial z_{1}^{[l+1]} }{\partial z_{j}^{[l]}} + \frac{\partial c_x }{\partial z_{2}^{[l+1]}}
+\frac{\partial z_{2}^{[l+1]} }{\partial z_{j}^{[l]}}
 \end{align}
 $$
 
 
 
+&= \sum_{k=2} \frac{\partial c_x }{\partial z_{k}^{[l+1]}} \frac{\partial z_{k}^{[l+1]}} }{\partial z_{j}^{[l]}}
 
 
 
