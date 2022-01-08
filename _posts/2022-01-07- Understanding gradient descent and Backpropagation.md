@@ -83,6 +83,15 @@ $$a^{[L]}$$ is a vector as shown in fig.3 and L = 2 for our example neural netwo
 
 Using Back propagation we calculate $$\frac{\partial c_x }{\partial w}$$ and $$\frac{\partial c_x }{\partial b}$$ for single training example and then from this we can calculate $$\frac{\partial C }{\partial w}$$ and $$\frac{\partial C }{\partial b}$$ by overaging over training examples. If we see per node, then our goal is to find $$\frac{\partial C }{\partial w_{jk}^{[l]}}$$ and $$\frac{\partial C }{\partial b_{j}^{[l]}}$$ for any layer *l* . 
 
+### Contribution of error from a single neuron
+
+Lets say we change our parameters and biases coming in to a neuron *j* of layer *l*. We know forward propagation equation as below. *k* represents all the *k* nodes of previous layer *l-1*
+
+$$z_j^{[l]} = \sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]}$$
+
+
+
+
 $$
 \begin{align}
 \frac{\partial E }{\partial w_{jk}} &= \frac{1}{2} \sum_{k}(a_k - t_k)^2 \\  
