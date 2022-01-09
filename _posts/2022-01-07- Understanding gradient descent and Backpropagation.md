@@ -214,11 +214,36 @@ Now we can substitute above $$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]}}$$ 
 
 $$
 \begin{align}
-\color{blue}{e_j^{[l]}} &= \color{blue}\sum_{k} \color{blue}{w_{kj}^{[l+1]}} \color{blue}{g'_{\text{activ}}(z_{j}^{[l]})} \color{blue}{e_k^{[l+1]}}
+\color{blue}{e_j^{[l]}} &= \color{blue}{\sum_{k}} \color{blue}{w_{kj}^{[l+1]}} \color{blue}{g'_{\text{activ}}(z_{j}^{[l]})} \color{blue}{e_k^{[l+1]}}
 \end{align}
 $$
 
 which is exact equation 2
+
+#### Proof of equation 4
+
+Consider below picture for understanding of proof
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp8.png" />
+</p>
+
+Again following chain rule, 
+
+$$
+\begin{align}
+\frac{\partial c_x}{\partial w_{jk}^{[l]}}&= \frac{\partial c_x }{\partial z_{j}^{[l]}} \frac{\partial z_{j}^{[l]} }{\partial w_{jk}^{[l]}}\tag{7}
+\end{align}
+$$
+
+We also know that from forward propagation,
+
+$$z_j^{[l]} = \sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]}$$
+
+Taking derivative of above equation with $${w_{jk}^{[l]}} gives $$a_jk^{[l-1]}$$ and we can substitute this in equation 7 above gives
+
+
+
 
 
 $$
