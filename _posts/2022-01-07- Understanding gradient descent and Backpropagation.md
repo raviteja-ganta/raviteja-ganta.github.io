@@ -207,7 +207,7 @@ $$
 
 where j are number of nodes in layer l and k are number of nodes in layer l+1. Taking partial derivate of equation 6 with $$z_j^{[l]}$$ gives
 
-$$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]} = w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})}$$
+$$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]}} = w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})}$$
 
 
 
