@@ -118,7 +118,7 @@ $$\frac{\partial c_x }{\partial b_{j}^{[l]}} = e_j^{[l]}\tag{3}$$
 
 #### Equation 4 - Rate of change of cost with respect to NN weights
 
-$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_jk^{[l-1]} e_j^{[l]}\tag{4}$$              
+$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_{jk}^{[l-1]} e_j^{[l]}\tag{4}$$              
 
 
 Now lets try to prove the above 4 equations and get some intuition of what we are getting from them. But before that lets understand chain rule of calculus which we help us going forward 
@@ -209,6 +209,8 @@ where j are number of nodes in layer l and k are number of nodes in layer l+1. T
 
 $$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]}} = w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})}$$
 
+
+$$\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_{jk}^{[l-1]} e_j^{[l]}\tag{4}$$              
 
 
 Now we can substitute $$z_k^{[l+1]}$$ from equation 6 in to equation 5 above
