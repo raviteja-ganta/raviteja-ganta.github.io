@@ -240,7 +240,15 @@ We also know that from forward propagation,
 
 $$z_j^{[l]} = \sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]}$$
 
-Taking derivative of above equation with $${w_{jk}^{[l]}} gives $$a_jk^{[l-1]}$$ and we can substitute this in equation 7 above gives
+Taking derivative of above equation with $${w_{jk}^{[l]}}$$ gives $$a_k^{[l-1]}$$ and we can substitute this in equation 7. Also from definitin of error
+$$\frac{\partial c_x }{\partial z_{j}^{[l]}}$$ = $$e_j^{[l]}$$. Substituting in equation 7 gives
+
+$$
+\begin{align}
+\color{blue}{\frac{\partial c_x}{\partial w_{jk}^{[l]}}} &= \color{blue}{e_j^{[l]} a_k^{[l-1]}}
+\end{align}
+$$
+
 
 
 
