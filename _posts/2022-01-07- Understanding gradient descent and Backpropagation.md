@@ -210,10 +210,15 @@ where j are number of nodes in layer l and k are number of nodes in layer l+1. T
 $$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]}} = w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})$$
 
 
+Now we can substitute above $$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]}}$$ in to equation 5 gives
 
-Now we can substitute $$z_k^{[l+1]}$$ from equation 6 in to equation 5 above
+$$
+\begin{align}
+{e_j^{[l]}} &= \sum_{k} w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]}) {e_k^{[l+1]}}
+\end{align}
+$$
 
-
+which is exact equation 2
 
 
 $$
