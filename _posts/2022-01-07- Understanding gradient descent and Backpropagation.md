@@ -43,6 +43,8 @@ Below is the calculation that happens as part of forward propagation in single n
 
 So the activation at any neuron in layer l can be written as 
 
+$$a_j^{[l]} = g_{\text{activ}}(\sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]})$$
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp4.png" />
 </p>
