@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Understanding gradient descent and Backpropagation"
+title:  "Understanding Backpropagation in Neural Netoworks"
 tags: [ Tips, Neural Networks]
-featured_image_thumbnail: assets/images/Transformers/tf_1_thumbnail.jpg
-featured_image: assets/images/Transformers/tf_2.jpg
+featured_image_thumbnail: assets/images/Transformers/bp_11_thumbnail.jpeg
+featured_image: assets/images/Backprop/bp_11.jpeg
 ---
 
 *This post is under development. Please come back later
@@ -280,7 +280,7 @@ $$
 which is exact equation 3
 
 
-> Using equations 1 and 2, we get contribution of errors for every layer and node of neural network. Using these and equations 3 and 4 we can compute rate of change of cost with respect to parameters W and b
+**Using equations 1 and 2, we get contribution of errors for every layer and node of neural network. Using these and equations 3 and 4 we can compute rate of change of cost with respect to parameters W and b.**
 
 
 ### Entire Process of Backpropagation and Gradient descent
