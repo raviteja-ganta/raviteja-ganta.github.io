@@ -214,7 +214,7 @@ Now we can substitute above $$\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]}}$$ 
 
 $$
 \begin{align}
-{e_j^{[l]}} &= \sum_{k} w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]}) {e_k^{[l+1]}}
+\color{blue}{e_j^{[l]}} &= \sum_{k} w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]}) {e_k^{[l+1]}}
 \end{align}
 $$
 
