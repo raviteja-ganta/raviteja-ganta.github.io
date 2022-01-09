@@ -249,8 +249,39 @@ $$
 \end{align}
 $$
 
+which is exact equation 4
 
 
+#### Proof of equation 3
+
+Consider below picture for understanding of proof
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp9.png" />
+</p>
+
+Again following chain rule, 
+
+$$
+\begin{align}
+\frac{\partial c_x}{\partial b_{j}^{[l]}}&= \frac{\partial c_x }{\partial z_{j}^{[l]}} \frac{\partial z_{j}^{[l]} }{\partial b_{j}^{[l]}}\tag{8}
+\end{align}
+$$
+
+We know that from forward propagation,
+
+$$z_j^{[l]} = \sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]}$$
+
+Taking derivative of above equation with $${b_{j}^{[l]}}$$ gives 1 and we can substitute this in equation 8. Also from definitin of error
+$$\frac{\partial c_x }{\partial z_{j}^{[l]}}$$ = $$e_j^{[l]}$$. Substituting in equation 8 gives
+
+$$
+\begin{align}
+\color{blue}{\frac{\partial c_x}{\partial b_{j}^{[l]}}} &= \color{blue}{e_j^{[l]}}
+\end{align}
+$$
+
+which is exact equation 3
 
 
 
