@@ -183,14 +183,15 @@ $$
 \begin{align}
 \{e_j^{[l]}} &= \frac{\partial c_x }{\partial z_{j}^{[l]}} \\
 &= (\frac{\partial c_x }{\partial z_{1}^{[l+1]}} \frac{\partial z_{1}^{[l+1]} }{\partial z_{j}^{[l]}}) + (\frac{\partial c_x }{\partial z_{2}^{[l+1]}}
-\frac{\partial z_{2}^{[l+1]} }{\partial z_{j}^{[l]}}) \\
-&= \sum_{k} \frac{\partial c_x }{\partial z_{k}^{[l+1]}} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}}
+\frac{\partial z_{2}^{[l+1]} }{\partial z_{j}^{[l]}})
 \end{align}
 $$
 
 
+&= \sum_{k} \frac{\partial c_x }{\partial z_{k}^{[l+1]}} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}}
 
-yes haha
+
+yes haha why
 
 
 
