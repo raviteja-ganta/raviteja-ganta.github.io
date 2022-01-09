@@ -188,11 +188,13 @@ $$
 \end{align}
 $$
 
+we can extrapolate this and replacing $${e_k^{[l+1]}}$$ for $$\frac{\partial c_x }{\partial z_{k}^{[l+1]}}$$ gives 
 
-
-
-yes haha why yes yes yes
-
+$$
+\begin{align}
+{e_j^{[l]}} &= \sum_{k} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}} {e_k^{[l+1]}}
+\end{align}
+$$
 
 
 $$
