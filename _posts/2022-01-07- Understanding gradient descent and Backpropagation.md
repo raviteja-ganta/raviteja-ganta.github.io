@@ -191,7 +191,7 @@ $$
 &= \sum_{k} \frac{\partial c_x }{\partial z_{k}^{[l+1]}} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}}
 
 
-yes haha why
+yes haha why yes yes
 
 
 
