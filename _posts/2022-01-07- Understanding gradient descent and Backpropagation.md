@@ -285,16 +285,6 @@ which is exact equation 3
 
 ### Entire Process of Backpropagation and Gradient descent
 
-$$
-\begin{align}
-for i in j:
-
-   for j in k:
-   
-      x = 2
-$$
-\end{align}
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp10.png" />
 </p>
