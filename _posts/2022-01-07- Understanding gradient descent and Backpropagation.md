@@ -299,7 +299,9 @@ for i in no_of_epochs:
       2)
          
         
-        
+for (statement 1; statement 2; statement 3) {
+// code block to be executed
+}
         
         
 $$
