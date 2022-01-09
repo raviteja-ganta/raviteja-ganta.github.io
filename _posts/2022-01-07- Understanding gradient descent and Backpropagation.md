@@ -284,7 +284,24 @@ $$
 which is exact equation 3
 
 
+> Using equations 1 and 2, we get contribution of errors for every layer and node of neural network. Using these and equations 3 and 4 we can compute rate of change of cost with respect to parameters W and b
 
+
+### Entire Process of Backpropagation and Gradient descent
+
+for i in no_of_epochs:
+  for j in list_of_min_batches:
+    for x in j:      (x = a training example in batch j)
+      
+      1) Feedforward: For l = 1,2,3,....L compute
+         $$Z^{[l](x)} = W^{[l][l-1} a}^{[x]} + b^{[l]}$$
+         $$A^{[l](x)} = g_{\text{activ}}(Z^{[l](x)$$
+      2)
+         
+        
+        
+        
+        
 $$
 \begin{align}
 \frac{\partial E }{\partial w_{jk}} &= \frac{1}{2} \sum_{k}(a_k - t_k)^2 \\  
