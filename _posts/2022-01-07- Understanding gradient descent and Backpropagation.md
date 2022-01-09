@@ -188,13 +188,25 @@ $$
 \end{align}
 $$
 
-we can extrapolate this and replacing $${e_k^{[l+1]}}$$ for $$\frac{\partial c_x }{\partial z_{k}^{[l+1]}}$$ gives 
+we can extrapolate this for any value k and replacing $${e_k^{[l+1]}}$$ for $$\frac{\partial c_x }{\partial z_{k}^{[l+1]}}$$ gives 
 
 $$
 \begin{align}
 {e_j^{[l]}} &= \sum_{k} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}} {e_k^{[l+1]}}
 \end{align}
 $$
+
+From forward propagation, we know 
+
+$$
+\begin{align}
+{z_k^{[l+1]}} &= \sum_{k} w_{kj}^{[l+1]} a_{j}^{[l]} + b_{k}^{[l+1]} \\
+&= \sum_{k} w_{kj}^{[l+1]} g_{\text{activ}}(z_{j}^{[L]}) + b_{k}^{[l+1]}
+\end{align}
+$$
+
+
+
 
 
 $$
