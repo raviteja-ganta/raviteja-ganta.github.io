@@ -192,7 +192,7 @@ we can extrapolate this for any value k and replacing $${e_k^{[l+1]}}$$ for $$\f
 
 $$
 \begin{align}
-{e_j^{[l]}} &= \sum_{k} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}} {e_k^{[l+1]}}
+{e_j^{[l]}} &= \sum_{k} \frac{\partial z_{k}^{[l+1]} }{\partial z_{j}^{[l]}} {e_k^{[l+1]}}\tag{5}
 \end{align}
 $$
 
@@ -200,11 +200,21 @@ From forward propagation, we know
 
 $$
 \begin{align}
-{z_k^{[l+1]}} &= \sum_{k} w_{kj}^{[l+1]} a_{j}^{[l]} + b_{k}^{[l+1]} \\
-&= \sum_{k} w_{kj}^{[l+1]} g_{\text{activ}}(z_{j}^{[L]}) + b_{k}^{[l+1]}
+{z_k^{[l+1]}} &= \sum_{j} w_{kj}^{[l+1]} a_{j}^{[l]} + b_{k}^{[l+1]} \\
+&= \sum_{j} w_{kj}^{[l+1]} g_{\text{activ}}(z_{j}^{[L]}) + b_{k}^{[l+1]}\tag{6}
 \end{align}
 $$
 
+where j are number of nodes in layer l and k are number of nodes in layer l+1. Taking partial derivate of equation 6 with $$z_j^{[l]}$$ gives
+
+$$
+\begin{align}
+\frac{\partial z_k^{[l+1]}}{\partial z_j^{[l]} &= w_{kj}^{[l+1]} g'_{\text{activ}}(z_{j}^{[l]})}
+\end{align}
+$$
+
+
+Now we can substitute $$z_k^{[l+1]}$$ from equation 6 in to equation 5 above
 
 
 
