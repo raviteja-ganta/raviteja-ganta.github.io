@@ -289,19 +289,9 @@ which is exact equation 3
 
 ### Entire Process of Backpropagation and Gradient descent
 
-for i in no_of_epochs:
-  for j in list_of_min_batches:
-    for x in j:      (x = a training example in batch j)
-      
-      1) Feedforward: For l = 1,2,3,....L compute
-         $$Z^{[l](x)} = W^{[l][l-1} a}^{[x]} + b^{[l]}$$
-         $$A^{[l](x)} = g_{\text{activ}}(Z^{[l](x)$$
-      2)
-         
-        
-for (statement 1; statement 2; statement 3) {
-// code block to be executed
-}
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp10.png" />
+</p>
         
         
 $$
