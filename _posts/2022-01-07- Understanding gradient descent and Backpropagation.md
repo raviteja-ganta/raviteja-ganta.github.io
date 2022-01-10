@@ -84,7 +84,7 @@ $$a^{[L]}$$ is a vector as shown in fig.3 and L = 2 for our example neural netwo
 
 Using Back propagation we calculate $$\frac{\partial c_x }{\partial w}$$ and $$\frac{\partial c_x }{\partial b}$$ for single training example and then from this we can calculate $$\frac{\partial C }{\partial w}$$ and $$\frac{\partial C }{\partial b}$$ by overaging over training examples. If we see per node, then our goal is to find $$\frac{\partial C }{\partial w_{jk}^{[l]}}$$ and $$\frac{\partial C }{\partial b_{j}^{[l]}}$$ for any layer *l* . 
 
-### Contribution of error from a single neuron
+### 3) Contribution of error from a single neuron
 
 Lets say we change our parameters and biases coming in to a neuron *j* of layer *l*. We know forward propagation equation as below. *k* represents all the *k* nodes of previous layer *l-1*
 
@@ -96,7 +96,7 @@ $$e_j^{[l]} = \frac{\partial c_x }{\partial z_{j}^{[l]}}$$
 
 Using Backpropagation we can compute $$e_j^{[l]}$$ first and then derive $$\frac{\partial c_x }{\partial w_{jk}^{[l]}}$$ and $$\frac{\partial c_x }{\partial b_{j}^{[l]}}$$ from this error.
 
-### Main equations of Backpropagation
+### 4) Main equations of Backpropagation
 
 #### Equation 1 - Equation for error in output layer $$e_j^{[L]}$$
 
@@ -124,7 +124,7 @@ $$\color{green}{\frac{\partial c_x }{\partial w_{jk}^{[l]}} = a_{jk}^{[l-1]} e_j
 
 Now lets try to prove the above 4 equations and get some intuition of what we are getting from them. But before that lets understand chain rule of calculus which we help us going forward 
 
-### Chain rule of Calculus
+### 5) Chain rule of Calculus
 
 Lets say we have 3 variables and they are related as shown below
 
@@ -135,7 +135,7 @@ Lets say we have 3 variables and they are related as shown below
 
 $$\frac{\partial c }{\partial z} = \frac{\partial c }{\partial a} * \frac{\partial a }{\partial z}$$
 
-### Proof of 4 equations of Back Propagation
+### 6) Proof of 4 equations of Back Propagation
 
 
 #### Proof of equation 1
@@ -288,7 +288,7 @@ which is exact equation 3
 **Using equations 1 and 2, we get contribution of errors for every layer and node of neural network. Using these and equations 3 and 4 we can compute rate of change of cost with respect to parameters W and b.**
 
 
-### Entire Process of Backpropagation and Gradient descent
+### 7) Entire Process of Backpropagation and Gradient descent
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp10.png" />
