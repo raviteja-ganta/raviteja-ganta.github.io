@@ -8,18 +8,23 @@ featured_image: assets/images/Backprop/bf_11.jpeg
 
 *This post is under development. Please come back later
 
-Gradient descent and backpropagation are workhorse behind training neural networks and understanding what's happeing inside these algorithms is atmost importance
+Backpropagation is workhorse behind training neural networks and understanding what's happeing inside this algorithm is atmost importance
 for efficient learning. This post gives in depth explanation of gradient descent and Backpropagation for training neural networks.
 
 
 Below are the contents:
 
-1) Notation to represent neural network
-2) Forward propagation
+1. Notation to represent neural network
+2. Forward propagation
+3. Contribution of error from a single neuron
+4. Main equations of Backpropagation
+5. Chain rule of Calculus
+6. Proof of 4 equations of Back Propagation
+7. Entire Process of Backpropagation and Gradient descent
 
 
 
-1) Notation to represent a neural network:
+### 1. Notation to represent a neural network:
 
 I will be using a 2 layer neural network as shown below through out this post as our running example.
 
@@ -33,7 +38,7 @@ I will be using a 2 layer neural network as shown below through out this post as
 
 *a<sub>j</sub><sup>[l]</sup>* - Activation of j<sup>th</sup> neuron in layer l
 
-2) Forward propagation:
+### 2) Forward propagation:
 
 Below is the calculation that happens as part of forward propagation in single neuron
 
