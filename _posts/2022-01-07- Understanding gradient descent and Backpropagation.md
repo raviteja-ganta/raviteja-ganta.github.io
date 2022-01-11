@@ -46,7 +46,7 @@ Below is the calculation that happens as part of forward propagation in single n
 
 So the activation at any neuron in layer l can be written as 
 
-$$a_j^{[l]} = g_{\text{activ}}(\sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]})$$
+$$a_j^{[l]} = g_{\text{activ}}(\sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]})\tag{a}$$
 
 ##### Matrix representation:
 
@@ -54,7 +54,7 @@ For Neural network in Fig 1 above,
 
 *w<sup>[l]</sup>* - Weight matrix for layer *l*
 
-We use equation 1 from above to calulate activations for every layer but all calculations are done using matrix mulitiplcations as they are very fast
+We use equation (a) from above to calulate activations for every layer but all calculations are done using matrix mulitiplcations as they are very fast
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp3.png" />
