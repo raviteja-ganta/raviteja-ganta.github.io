@@ -23,7 +23,6 @@ Below are the contents:
 7. Entire Process of Backpropagation and Gradient descent
 
 
-
 ### 1. Notation to represent a neural network:
 
 I will be using a 2 layer neural network as shown below through out this post as our running example.
