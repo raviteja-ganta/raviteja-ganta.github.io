@@ -32,11 +32,9 @@ I will be using a 2 layer neural network as shown below through out this post as
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp1.png" />
 </p>
 
-*w<sub>jk</sub><sup>[l]</sup>* - Weight for connection from k<sup>th</sup> neuron in layer (l-1) to j<sup>th</sup> neuron in layer l
-
-*b<sub>j</sub><sup>[l]</sup>* - Bias of j<sup>th</sup> neuron in layer l
-
-*a<sub>j</sub><sup>[l]</sup>* - Activation of j<sup>th</sup> neuron in layer l
+- *w<sub>jk</sub><sup>[l]</sup>* - Weight for connection from k<sup>th</sup> neuron in layer (l-1) to j<sup>th</sup> neuron in layer l
+- *b<sub>j</sub><sup>[l]</sup>* - Bias of j<sup>th</sup> neuron in layer l
+- *a<sub>j</sub><sup>[l]</sup>* - Activation of j<sup>th</sup> neuron in layer l
 
 ### 2) Forward propagation:
 
