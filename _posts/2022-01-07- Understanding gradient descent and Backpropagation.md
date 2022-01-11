@@ -48,7 +48,7 @@ So the activation at any neuron in layer l can be written as
 
 $$a_j^{[l]} = g_{\text{activ}}(\sum_{k} w_{jk}^{[l]} a_{k}^{[l-1]} + b_{j}^{[l]})$$
 
-Matrix representation:
+##### Matrix representation:
 
 For Neural network in Fig 1 above,
 
