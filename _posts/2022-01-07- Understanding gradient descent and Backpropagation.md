@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understanding Backpropagation in Neural Netoworks"
+title:  "Understanding Backpropagation in Neural Networks"
 tags: [ Tips, Neural Networks]
 featured_image_thumbnail: assets/images/Backprop/bf_11_thumbnail.jpeg
 featured_image: assets/images/Backprop/bf_11.jpeg
