@@ -290,6 +290,16 @@ which is exact equation 3
 <p align="center">
   <img src="https://raw.githubusercontent.com/raviteja-ganta/raviteja-ganta.github.io/main/assets/images/Backprop/bp10.png" />
 </p>
+
+
+References:
+
+1) Micheal A. Nielsen, "Neural Networks and Deep Learning"
+
+2) Deep learning Nanodegree from Udacity
+
+3) Deep learning specialization by Andrew Ng
+
         
 
 
