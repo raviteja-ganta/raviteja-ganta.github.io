@@ -6,8 +6,6 @@ featured_image_thumbnail: assets/images/Backprop/bf_11_thumbnail.jpeg
 featured_image: assets/images/Backprop/bf_11.jpeg
 ---
 
-*This post is under active development.
-
 Backpropagation is workhorse behind training neural networks and understanding what's happeing inside this algorithm is atmost importance
 for efficient learning. This post gives in depth explanation of Backpropagation for training neural networks.
 
